@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Get Started — YourProduct</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+            background: #0b1020;
+            color: #eaf2ff
+        }
+
+        .wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 18px
+        }
+
+        a {
+            color: #6ee7ff;
+            text-decoration: none
+        }
+
+        .muted {
+            color: #96a0b5
+        }
+
+        .card {
+            background: #111833;
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 16px;
+            padding: 18px
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .12);
+            color: #eaf2ff;
+            border-radius: 10px;
+            outline: none
+        }
+
+        button {
+            padding: 10px 16px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            background: linear-gradient(180deg, rgba(110, 231, 255, .25), rgba(110, 231, 255, .08));
+            color: #eaf2ff;
+            cursor: pointer
+        }
+    </style>
+</head>
+
+<body>
+    <main class="wrap">
+        <h1>Get Started</h1>
+        <div class="card">
+            <p class="muted">Enter your email and we’ll reach out.</p>
+            <form
+                onsubmit="event.preventDefault(); window.open('mailto:you@example.com?subject=New%20Signup&body=' + encodeURIComponent(document.getElementById('email').value), '_blank')">
+                <input id="email" type="email" placeholder="Your email" required />
+                <textarea id="msg" rows="4" placeholder="Anything specific?"></textarea>
+                <button type="submit">Request Access</button>
+            </form>
+        </div>
+        <p style="margin-top:16px"><a href="PAGELANDING.html">← Back to Home</a></p>
+    </main>
+</body>
+
+</html>

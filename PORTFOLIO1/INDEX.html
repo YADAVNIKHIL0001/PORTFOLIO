@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nikhil Yadav | Web Developer</title>
+    <meta name="description"
+        content="Portfolio of Nikhil Yadav, 17-year-old student web developer. HTML, CSS, JavaScript projects, responsive design, and contact." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #111827;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            --brand: #22d3ee;
+            --accent: #34d399;
+            --ring: rgba(34, 211, 238, 0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            background: radial-gradient(1200px 800px at 80% -10%, rgba(34, 211, 238, 0.12), transparent 60%), radial-gradient(1000px 600px at -10% 10%, rgba(52, 211, 153, 0.10), transparent 60%), var(--bg);
+            color: var(--text);
+        }
+
+        a {
+            color: var(--brand);
+            text-decoration: none;
+        }
+
+        header {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(8px);
+            background: rgba(15, 23, 42, 0.45);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            z-index: 10;
+        }
+
+        .logo {
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        nav a {
+            margin-left: 16px;
+            color: var(--text);
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 28px 20px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 999px;
+            background: rgba(17, 24, 39, 0.6);
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 1.15;
+            margin: 14px 0;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .cta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 16px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: linear-gradient(180deg, rgba(34, 211, 238, 0.18), rgba(34, 211, 238, 0.06));
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        .btn.secondary {
+            background: linear-gradient(180deg, rgba(52, 211, 153, 0.18), rgba(52, 211, 153, 0.06));
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.6));
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 18px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .grid.cols-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid.cols-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin: 8px 0 4px;
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .skills {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .chip {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 13px;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .project img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .project a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            padding: 30px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            margin-top: 16px;
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--text);
+            border-radius: 10px;
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus {
+            box-shadow: 0 0 0 4px var(--ring);
+            border-color: var(--brand);
+        }
+
+        .inline {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 860px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .grid.cols-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .grid.cols-2 {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Nikhil Yadav</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero card" id="about">
+            <div>
+                <span class="badge">Student • 17 • Web Developer</span>
+                <h1>Building clean, responsive websites using HTML, CSS, and JavaScript.</h1>
+                <p class="subtitle">12th-standard student focusing on front-end fundamentals, accessibility, and
+                    performance; open to internships, mini-projects, and volunteer work. </p>
+                <div class="cta">
+                    <a class="btn" href="#projects">View Projects</a>
+                    <a class="btn secondary"
+                        href="mailto:STORTSRAOSAHAB@gmail.com?subject=Project%20for%20Nikhil&body=Hi%20Nikhil%2C%20we%27d%20like%20to%20discuss%20a%20project.">Email
+                        Me</a>
+                </div>
+                <p class="muted" style="margin-top:10px;">Location: India • Availability: 1–2 hrs/day after school •
+                    Remote preferred</p>
+            </div>
+            <div class="card">
+                <div class="section-title">Quick Info</div>
+                <ul class="muted" style="padding-left:18px; line-height:1.8;">
+                    <li>Name: Nikhil Yadav</li>
+                    <li>Age: 17 (Class 12)</li>
+                    <li>Email: <a href="mailto:STORTSRAOSAHAB@gmail.com">STORTSRAOSAHAB@gmail.com</a></li>
+                    <li>Focus: Front-end (HTML, CSS, JS)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="grid cols-3">
+            <div class="project card">
+                <img src="https://images.unsplash.com/photo-1520975922327-3fdc2a96c3f0?q=80&w=1200&auto=format&fit=crop"
+                    alt="Landing page screenshot placeholder" />
+                <h3>Product Landing Page</h3>
+                <p class="muted">Responsive landing page with hero, features, and contact CTA; built mobile-first and
+                    Lighthouse-tested. </p>
+                <div>
+                    <a href="#" target="_blank">Live Demo</a> •
+                    <a href="#" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+            <div class="project card">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
+                    alt="To-do app screenshot placeholder" />
+                <h3>To‑Do Web App</h3>
+                <p class="muted">Vanilla JS to‑do with localStorage persistence, filters, and keyboard accessibility.
+                </p>
+                <div>
+                    <a href="#" target="_blank">Live Demo</a> •
+                    <a href="#" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+            <div class="project card">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop"
+                    alt="Portfolio screenshot placeholder" />
+                <h3>Personal Portfolio</h3>
+                <p class="muted">This site template: responsive layout, semantic HTML, and accessible color contrast.
+                </p>
+                <div>
+                    <a href="#" target="_blank">Live Demo</a> •
+                    <a href="#" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="card" style="margin-top:16px;">
+            <div class="section-title">Skills</div>
+            <div class="skills">
+                <span class="chip">HTML5</span>
+                <span class="chip">CSS3</span>
+                <span class="chip">Responsive Design</span>
+                <span class="chip">JavaScript (ES6)</span>
+                <span class="chip">Accessibility (a11y)</span>
+                <span class="chip">Git & GitHub</span>
+                <span class="chip">Bootstrap</span>
+            </div>
+            <p class="muted" style="margin-top:10px;">Currently learning: Forms, fetch API, basic React, and SEO
+                essentials. </p>
+        </section>
+
+        <section class="grid cols-2" style="margin-top:16px;">
+            <div class="card">
+                <div class="section-title">Services</div>
+                <ul class="muted" style="padding-left:18px; line-height:1.8;">
+                    <li>Basic website setup and landing pages</li>
+                    <li>Bug fixes, UI tweaks, and responsiveness</li>
+                    <li>Portfolio and small business sites</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="section-title">Highlights</div>
+                <ul class="muted" style="padding-left:18px; line-height:1.8;">
+                    <li>Mobile‑first approach with semantic HTML</li>
+                    <li>Clean CSS and consistent spacing scale</li>
+                    <li>Fast load with minimal dependencies</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="card" style="margin-top:16px;">
+            <div class="section-title">Contact</div>
+            <p class="muted">For internships, mini‑projects or chat support roles, send a message below or email
+                directly. </p>
+            <form
+                onsubmit="event.preventDefault(); window.location.href = `mailto:STORTSRAOSAHAB@gmail.com?subject=${encodeURIComponent(document.getElementById('subj').value || 'Inquiry for Nikhil')}&body=${encodeURIComponent('Hi Nikhil,%0D%0A%0D%0A' + (document.getElementById('msg').value || 'I would like to connect.') + '%0D%0A%0D%0ARegards,%0D%0A' + (document.getElementById('name').value || '') + ' | ' + (document.getElementById('email').value || ''))}`;">
+                <div class="inline">
+                    <input id="name" type="text" placeholder="Your name" aria-label="Your name" />
+                    <input id="email" type="email" placeholder="Your email" aria-label="Your email" />
+                </div>
+                <input id="subj" type="text" placeholder="Subject" aria-label="Subject" />
+                <textarea id="msg" rows="4" placeholder="Your message" aria-label="Message"></textarea>
+                <button class="btn" type="submit">Send Email</button>
+            </form>
+            <p class="muted" style="margin-top:8px;">Email: <a
+                    href="mailto:STORTSRAOSAHAB@gmail.com">STORTSRAOSAHAB@gmail.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        © 2025 Nikhil Yadav • Built with HTML + CSS
+    </footer>
+</body>
+
+</html>
